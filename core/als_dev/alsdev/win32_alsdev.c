@@ -220,7 +220,8 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 		ActivateInstance();
 		return FALSE;
 	}
-	
+
+	/*
 	{
 		char path[MAX_PATH], dir[MAX_PATH], env[2*MAX_PATH], *dir_end;
 		
@@ -240,6 +241,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 		if (Tcl_PutEnv(env) != TCL_OK)
 			panic("Couldn't set TK_LIBRARY");
 	}
+	*/
 	
 	/* Make the OpenDocument package available to Tcl */
 	Tcl_StaticPackage(NULL, "Opendocument", Opendocument_Init, NULL);
