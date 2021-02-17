@@ -15,7 +15,7 @@ install:
 libcrypt-devel,mingw64-i686-libgcrypt,mingw64-i686-curl,tcl-tk-devel,mingw64-i686-tcl,mingw64-i686-tk,zip,php,procps"
 
 build_script:
-  - C:\Cygwin\bin\bash -l %APPVEYOR_BUILD_FOLDER%\cibuild
+  - C:\msys64\usr\bin\bash -l %APPVEYOR_BUILD_FOLDER%\cibuild
 
 on_finish:
   - ps: |
