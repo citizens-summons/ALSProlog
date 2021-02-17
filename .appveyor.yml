@@ -1,3 +1,5 @@
+image: Visual Studio 2019
+
 # TODO: Fix cygwin-unix build:    - OS: unix
 environment:
   matrix:
