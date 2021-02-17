@@ -1,7 +1,9 @@
 # TODO: Fix cygwin-unix build:    - OS: unix
 environment:
   matrix:
-    - OS: win32
+    - MSYSTEM: MINGW32
+#    - MSYS2_ARCH: x86_64
+#      MSYSTEM: MINGW64
 
 cache:
 #  - C:/cygwin/var/cache/setup -> .appveyor.yml
@@ -15,7 +17,7 @@ install:
 #libcrypt-devel,mingw64-i686-libgcrypt,mingw64-i686-curl,tcl-tk-devel,mingw64-i686-tcl,mingw64-i686-tk,zip,php,procps"
 
 build_script:
-  - C:\msys64\mingw32\bin\bash -l %APPVEYOR_BUILD_FOLDER%\cibuild
+  - C:\msys64\usr\bin\bash -l %APPVEYOR_BUILD_FOLDER%\cibuild
 
 on_finish:
   - ps: |
