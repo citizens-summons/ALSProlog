@@ -9,13 +9,14 @@ case `uname -rs` in
     "HP-UX"*)	ARCH=hpux    ; SOEXT=sl    ;;
     "IRIX"*)	ARCH=irix    ; SOEXT=so    ;;
     "CYGWIN"*)  ARCH=win32  ; SOEXT=dll   ;;
+    "MINGW"*)   ARCH=win32  ; SOEXT=dll   ;;
     "Darwin"*)	ARCH=darwin  ; SOEXT=dylib ;;
     *) 		echo "Unknown machine type..."; exit 1 ;;
 esac
 
 ALS_PROLOG=..
 BIN=$ALS_PROLOG/core/$ARCH
-ALS_BUILD_SUPPORT=/usr/i686-w64-mingw32/sys-root/mingw/
+ALS_BUILD_SUPPORT=/mingw32
 
 LIB=$ALS_PROLOG/core/alsp_src/library
 EXAMPLES=$ALS_PROLOG/examples
@@ -81,9 +82,9 @@ cp -p "$ALS_BUILD_SUPPORT"/bin/libssh2-1.dll "$DISTDIR"
 #cp -p "$ALS_BUILD_SUPPORT"/bin/crypto.dll "$DISTDIR"
 #cp -p "$ALS_BUILD_SUPPORT"/bin/libeay32.dll "$DISTDIR"
 #cp -p "$ALS_BUILD_SUPPORT"/bin/ssleay32.dll "$DISTDIR"
-cp -p "$ALS_BUILD_SUPPORT"/bin/libgcc_s_sjlj-1.dll "$DISTDIR"
+cp -p "$ALS_BUILD_SUPPORT"/bin/libgcc_s_dw2-1.dll "$DISTDIR"
 cp -p "$ALS_BUILD_SUPPORT"/bin/libwinpthread-1.dll "$DISTDIR"
-cp -p "$ALS_BUILD_SUPPORT"/bin/libzstd-1.dll "$DISTDIR"
+cp -p "$ALS_BUILD_SUPPORT"/bin/libzstd.dll "$DISTDIR"
 
 mkdir "$DISTDIR"/lib
 cp -pr "$ALS_BUILD_SUPPORT"/lib/tcl8.6 "$DISTDIR"/lib
