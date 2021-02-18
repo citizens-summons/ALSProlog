@@ -9,14 +9,12 @@ environment:
 
 cache:
 #  - C:/cygwin/var/cache/setup -> .appveyor.yml
-  - C:\ProgramData\chocolatey\bin -> appveyor.yml
-  - C:\ProgramData\chocolatey\lib -> appveyor.yml
   - C:/bundle -> .appveyor.yml
 
 install:
   - choco install php -y
   - refreshenv
-  - SET PATH=C:\Ruby26\bin;%PATH%
+  - SET PATH=C:\Ruby27\bin;%PATH%
   - SET BUNDLE_PATH=C:\bundle
   - C:\msys64\usr\bin\bash -lc "pacman --noconfirm -Syuu"
   - C:\msys64\usr\bin\bash -lc "pacman --noconfirm --needed --sync mingw-w64-i686-curl zip procps"
