@@ -8,8 +8,7 @@ case `uname -rs` in
     Linux*) 	ARCH=linux   ; SOEXT=so    ;;
     "HP-UX"*)	ARCH=hpux    ; SOEXT=sl    ;;
     "IRIX"*)	ARCH=irix    ; SOEXT=so    ;;
-    "CYGWIN"*)  ARCH=win32  ; SOEXT=dll   ;;
-    "MINGW"*)   ARCH=win32  ; SOEXT=dll   ;;
+    *"_NT"*)  ARCH=win32  ; SOEXT=dll   ;;
     "Darwin"*)	ARCH=darwin  ; SOEXT=dylib ;;
     *) 		echo "Unknown machine type..."; exit 1 ;;
 esac
