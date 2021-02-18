@@ -9,6 +9,8 @@ environment:
 
 cache:
 #  - C:/cygwin/var/cache/setup -> .appveyor.yml
+  - C:\ProgramData\chocolatey\bin -> appveyor.yml
+  - C:\ProgramData\chocolatey\lib -> appveyor.yml
   - C:/bundle -> .appveyor.yml
 
 install:
@@ -16,7 +18,7 @@ install:
   - refreshenv
   - SET PATH=C:\Ruby26\bin;%PATH%
   - SET BUNDLE_PATH=C:\bundle
-  - C:\msys64\usr\bin\bash -lc "pacman --noconfirm -Syuu || true"
+  - C:\msys64\usr\bin\bash -lc "pacman --noconfirm -Syuu"
   - C:\msys64\usr\bin\bash -lc "pacman --noconfirm --needed --sync mingw-w64-i686-curl zip procps"
 #  - "C:/cygwin/setup-x86.exe -qnNdO -R C:/cygwin -s http://cygwin.mirror.constant.com -l C:/cygwin/var/cache/setup 
 #-P 
