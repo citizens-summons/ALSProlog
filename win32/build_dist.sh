@@ -70,6 +70,7 @@ cp -p "$ALS_BUILD_SUPPORT"/bin/libgcc_s_dw2-1.dll "$DISTDIR"
 cp -p "$ALS_BUILD_SUPPORT"/bin/zlib1.dll "$DISTDIR"
 
 #MinGW64 Curl libs
+cp -p "$ALS_BUILD_SUPPORT"/bin/libcurl-4.dll "$DISTDIR"
 cp -p "$ALS_BUILD_SUPPORT"/bin/libwinpthread-1.dll "$DISTDIR"
 cp -p "$ALS_BUILD_SUPPORT"/bin/libgcc_s_dw2-1.dll "$DISTDIR"
 cp -p "$ALS_BUILD_SUPPORT"/bin/libbrotlidec.dll "$DISTDIR"
