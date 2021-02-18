@@ -7,6 +7,7 @@ export TESTDIR=$(dirname "$0")
 
 case "$(uname)" in
     "CYGWIN"*)  EXT=.exe ;;
+    "MINGW"*)   EXT=.exe ;;
     *)          EXT=''   ;;
 esac
 
