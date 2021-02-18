@@ -13,6 +13,7 @@ cache:
 
 install:
   - choco install php -y
+  - refreshenv
   - SET PATH=C:\Ruby26\bin;%PATH%
   - SET BUNDLE_PATH=C:\bundle
   - C:\msys64\usr\bin\bash -lc "pacman --noconfirm -Syuu || true"
