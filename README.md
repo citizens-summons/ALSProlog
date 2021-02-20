@@ -51,8 +51,10 @@ CentOS/Fedora: `sudo yum groupinstall 'Development Tools' && sudo yum install ru
 
 ### Windows
 
-[Cygwin](https://cygwin.com) 32-bit is used to build both Win32 and Cygwin, with packages:
+The [MSYS2](https://www.msys2.org) tool-chain is used to build for Win32, with packages:
 
+    pacman --sync base-devel mingw-w64-i686-curl zip procps
+    
 - Devel (git make gcc-core mingw64-i686-gcc-core libcrypt-devel mingw64-i686-libgcrypt)
 - Tcl-Tk (tcl-tk-devel mingw64-i686-tcl mingw64-i686-tk)
 - Libcurl (mingw64-i686-curl php procps)
